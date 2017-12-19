@@ -1,0 +1,39 @@
+# Question Description 
+
+# Given a string, find the length of the longest substring without repeating characters.
+
+# Examples:
+
+# Given "abcabcbb", the answer is "abc", which the length is 3.
+# Given "bbbbbb", the answer is "b", with the length of 1.
+
+
+#!/user/bin/python
+
+def countfunction(x):
+
+        all_string = list(x)
+        length_string = len(x)
+
+        save_index_start = []
+        save_index_end = []
+        save_length = []
+
+        for index in range(0,len(x)-1):
+                count = 0
+                save_index_start.append(index)
+                if (index != len(x)-1):
+                        for index2 in range(index+1, len(x)-1):
+                                print(index2)
+                                if (all_string[index] != all_string[index2]):
+                                        count += 1
+                                        print(index2)
+                                else:
+                                        save_index_end.append(index2)
+                                        save_length(index2 - index)
+        print (save_index_start)
+        print (save_index_end)
+        print (save_length)
+
+x = ['e','b','a','e','e']
+countfunction(x)
