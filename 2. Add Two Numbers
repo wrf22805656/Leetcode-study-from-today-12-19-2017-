@@ -1,0 +1,31 @@
+# Question Description
+
+# You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their
+# nodes contain a single digit. Add the two numbers and return it as a linked list.
+
+# You may assume the two numbers do not contain any leading zero, except the number 0 itself. 
+
+
+
+#!/user/bin/python
+
+def addtwonumbers(list1, list2):
+
+        # reverse two lists
+        list1.reverse()
+        list2.reverse()
+
+        # let these numbers be real numbers
+        number1 = int("".join(list1))
+        number2 = int("".join(list2))
+
+        final_number = number1 + number2
+        final_list = list(str(final_number))
+        final_list.reverse()
+
+        print (final_list)
+
+list1 = ['1','2','3']
+list2 = ['6','7','8']
+
+addtwonumbers(list1,list2)
